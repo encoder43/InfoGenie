@@ -1,0 +1,40 @@
+# Core framework
+fastapi
+uvicorn[standard]
+
+# Frontend (optional if you continue Streamlit UI)
+streamlit
+streamlit-chat
+
+# ML / NLP stack
+torch
+transformers
+sentence-transformers
+
+# Vector DB
+chromadb
+
+# LangChain & Community modules
+langchain
+langchain-community
+
+# PDF handling
+pdfminer.six
+pypdf
+
+# Utilities
+python-dotenv
+requests
+tqdm
+
+# Optional but commonly used in embeddings / text splitting
+numpy
+scikit-learn
+nltk
+
+# Form handling
+python-multipart
+pydantic-settings
+accelerate
+bitsandbytes
+aiofiles

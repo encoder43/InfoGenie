@@ -1,0 +1,299 @@
+# =============================================================================
+# InfoGenie - Professional .gitignore
+# Comprehensive ignore patterns for Python, React, Docker, and ML projects
+# =============================================================================
+
+# =============================================================================
+# Python
+# =============================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.env
+.venv
+
+# PyCharm
+.idea/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# =============================================================================
+# Machine Learning & AI Models
+# =============================================================================
+# Model weights and checkpoints
+*.pth
+*.pt
+*.bin
+*.safetensors
+*.ckpt
+*.h5
+
+# Model cache directories
+.huggingface/
+models/
+.cache/
+transformers_cache/
+sentence_transformers_cache/
+
+# ChromaDB persistence
+db/
+chroma_db/
+
+# Large datasets
+data/
+datasets/
+*.csv
+*.json
+*.parquet
+
+# =============================================================================
+# Node.js / React Frontend
+# =============================================================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Dependency directories
+jspm_packages/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional stylelint cache
+.stylelintcache
+
+# Microbundle cache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# dotenv environment variable files
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
+
+# Stores VSCode versions used for testing VSCode extensions
+.vscode-test
+
+# yarn v2
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# =============================================================================
+# Docker
+# =============================================================================
+.dockerignore
+
+# =============================================================================
+# Documentation
+# =============================================================================
+docs/_build/
+site/
+
+# =============================================================================
+# IDEs and Editors
+# =============================================================================
+# VSCode
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# =============================================================================
+# Operating System Files
+# =============================================================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.tmp
+*.lnk
+Desktop.ini
+
+# Linux
+*~
+
+# =============================================================================
+# Logs and Temporary Files
+# =============================================================================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+
+# nyc test coverage
+.nyc_output
+
+# =============================================================================
+# Backup and Temporary Files
+# =============================================================================
+*.bak
+*.backup
+*.old
+*.tmp
+*.temp
+temp/
+tmp/
+
+# =============================================================================
+# Project Specific
+# =============================================================================
+# Debug and test files
+debug_*.py
+debug_*.js
+debug_*.ps1
+test_*.py
+minimal_main.py
+test_server.py
+
+# Development scripts
+debug_backend.ps1
+debug_network.js
+
+# Documentation files (keep deployment guides)
+DEBUGGING_GUIDE.md
+model_recommendations.md
+CHANGELOG.md
+deploy.md
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Uploaded documents (keep structure)
+backend/docs/*
+!backend/docs/.gitkeep
+
+# =============================================================================
+# Environment and Configuration
+# =============================================================================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# =============================================================================
+# Build Outputs
+# =============================================================================
+/build
+/dist
+/out
+
+# =============================================================================
+# Security
+# =============================================================================
+# API keys and secrets
+secrets.json
+*.pem
+*.key
+*.crt
+
+# =============================================================================
+# Performance and Profiling
+# =============================================================================
+*.prof
+*.profile
+*.pprof

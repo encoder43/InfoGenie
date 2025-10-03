@@ -1,0 +1,59 @@
+# =============================================================================
+# Render.com Configuration for InfoGenie RAG Application
+# =============================================================================
+
+services:
+  - type: web
+    name: infogenie-backend
+    env: docker
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    plan: starter  # Change to 'standard' or 'pro' for production
+    region: oregon  # Choose closest to your users
+    branch: main  # Your main branch name
+    
+    # Environment Variables
+    envVars:
+      - key: PYTHONUNBUFFERED
+        value: 1
+      - key: PYTHONDONTWRITEBYTECODE
+        value: 1
+      - key: HF_HOME
+        value: /app/models
+      - key: TRANSFORMERS_CACHE
+        value: /app/models
+      - key: SENTENCE_TRANSFORMERS_HOME
+        value: /app/models
+      - key: PORT
+        value: 8000
+      - key: HOST
+        value: 0.0.0.0
+    
+    # Health Check Configuration
+    healthCheckPath: /
+    
+    # Auto-Deploy Configuration
+    autoDeploy: true
+    
+    # Build Configuration
+    buildCommand: echo "Building with Docker..."
+    startCommand: echo "Starting with Docker CMD..."
+    
+    # Resource Limits (adjust based on your plan)
+    disk:
+      name: infogenie-disk
+      mountPath: /app/data
+      sizeGB: 1
+    
+    # Scaling Configuration
+    scaling:
+      minInstances: 1
+      maxInstances: 3
+      targetCPUPercent: 70
+      targetMemoryPercent: 80
+
+# Optional: Database service (if you need persistent storage)
+# databases:
+#   - name: infogenie-db
+#     plan: starter
+#     region: oregon
