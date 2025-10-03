@@ -16,6 +16,15 @@ RUN apt-get update && apt-get install -y \
     libssl-dev \
     && rm -rf /var/lib/apt/lists/*
 
+# --- Build-time model selection (with sensible defaults) ---
+# You can override these at build time for smaller models on free tiers
+# Example (free tier):
+#   docker build --build-arg EMBEDDING_MODEL_NAME=all-MiniLM-L6-v2 \
+#                --build-arg LLM_CHECKPOINT=google/flan-t5-small \
+#                -t infogenie:mini .
+ARG EMBEDDING_MODEL_NAME=all-mpnet-base-v2
+ARG LLM_CHECKPOINT=google/flan-t5-large
+
 # --- Environment Variables ---
 ENV PYTHONUNBUFFERED=1
 ENV PIP_NO_CACHE_DIR=1
@@ -37,14 +46,18 @@ ENV HF_HOME=/app/models
 ENV TRANSFORMERS_CACHE=/app/models
 ENV SENTENCE_TRANSFORMERS_HOME=/app/models
 
-# Download embedding model
+# Download embedding model (parameterized)
 RUN python -c "from sentence_transformers import SentenceTransformer; \
-               SentenceTransformer('all-mpnet-base-v2')"
+               import os; \
+               model=os.environ.get('EMBEDDING_MODEL_NAME','all-mpnet-base-v2'); \
+               SentenceTransformer(model)"
 
-# Download LLM model
+# Download LLM model (parameterized)
 RUN python -c "from transformers import AutoTokenizer, AutoModelForSeq2SeqLM; \
-               tokenizer = AutoTokenizer.from_pretrained('google/flan-t5-large'); \
-               model = AutoModelForSeq2SeqLM.from_pretrained('google/flan-t5-large')"
+               import os; \
+               ckpt=os.environ.get('LLM_CHECKPOINT','google/flan-t5-large'); \
+               tokenizer = AutoTokenizer.from_pretrained(ckpt); \
+               model = AutoModelForSeq2SeqLM.from_pretrained(ckpt)"
 
 # ~~~~~~~~~~~ STAGE 2: Production Image ~~~~~~~~~~~
 FROM python:3.10-slim as production
@@ -57,12 +70,18 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/* \
     && apt-get clean
 
+# --- Build-time model selection (propagate defaults) ---
+ARG EMBEDDING_MODEL_NAME=all-mpnet-base-v2
+ARG LLM_CHECKPOINT=google/flan-t5-large
+
 # --- Environment Variables ---
 ENV PYTHONUNBUFFERED=1
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV HF_HOME=/app/models
 ENV TRANSFORMERS_CACHE=/app/models
 ENV SENTENCE_TRANSFORMERS_HOME=/app/models
+ENV EMBEDDING_MODEL_NAME=${EMBEDDING_MODEL_NAME}
+ENV LLM_CHECKPOINT=${LLM_CHECKPOINT}
 
 # --- Create Application User ---
 RUN groupadd -r appuser && useradd -r -g appuser appuser
