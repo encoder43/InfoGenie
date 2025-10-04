@@ -406,7 +406,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - 💼 LinkedIn: [yerramdeekshithkumar](https://www.linkedin.com/in/yerramdeekshithkumar)
 
 **Project Links:**
-- 🚀 Live Demo: [Demo URL](#)
+- 🚀 Live Demo: [Demo URL](https://infogenie-abd.onrender.com)
 - 📖 Documentation: [Docs URL](#)
 - 📖Research paper:[Infoginie](https://www.scitepress.org/Papers/2024/133125/133125.pdf)
 - 🐛 Issue Tracker: [GitHub Issues](https://github.com/encoder43/infogenie/issues)
