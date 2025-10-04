@@ -68,7 +68,8 @@ export function UploadSection({ onUploadSuccess, isCompact = false }: UploadSect
       
       console.log("5b. FormData created, entries:", Array.from(formData.entries()));
 
-      const response = await fetch("https://infogenie-himm.onrender.com/upload", {
+      const apiUrl = import.meta.env.VITE_API_BASE_URL || "http://localhost:8000";
+      const response = await fetch(`${apiUrl}/upload`, {
         method: "POST",
         body: formData,
       });

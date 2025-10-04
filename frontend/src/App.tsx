@@ -82,7 +82,8 @@ export default function App() {
     setIsLoading(true);
 
     try {
-      const response = await fetch("https://infogenie-himm.onrender.com/ask", {
+      const apiUrl = import.meta.env.VITE_API_BASE_URL || "http://localhost:8000";
+      const response = await fetch(`${apiUrl}/ask`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
