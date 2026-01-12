@@ -1,4 +1,4 @@
-# 🔮 InfoGenie - Intelligent PDF Document Assistant
+#  InfoGenie - Intelligent PDF Document Assistant
 
 <div align="center">
 
@@ -18,82 +18,82 @@
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [About](#about)
-- [✨ Features](#features)
-- [🛠️ Tech Stack](#tech-stack)
-- [🚀 Quick Start](#quick-start)
-- [🐳 Docker Deployment](#docker-deployment)
-- [📖 API Documentation](#api-documentation)
-- [🏗️ Development](#development)
-- [🧪 Testing](#testing)
-- [📦 Production Deployment](#production-deployment)
-- [🤝 Contributing](#contributing)
-- [📄 License](#license)
-- [📞 Contact](#contact)
+- [ Features](#features)
+- [ Tech Stack](#tech-stack)
+- [ Quick Start](#quick-start)
+- [ Docker Deployment](#docker-deployment)
+- [ API Documentation](#api-documentation)
+- [ Development](#development)
+- [ Testing](#testing)
+- [ Production Deployment](#production-deployment)
+- [ Contributing](#contributing)
+- [License](#license)
+- [ Contact](#contact)
 
 ---
 
-## 📖 About
+## About
 
 InfoGenie is a cutting-edge **Retrieval-Augmented Generation (RAG)** application that transforms how you interact with PDF documents. Simply upload a PDF, ask questions in natural language, and receive intelligent, context-aware answers extracted directly from your document content.
 
 **Perfect for:**
-- 📚 Research and academia
-- 📄 Legal document analysis  
-- 📊 Business report insights
-- 📖 Educational content exploration
-- 💼 Enterprise document management
+- Research and academia
+-  Legal document analysis  
+-  Business report insights
+-  Educational content exploration
+-  Enterprise document management
 
 ---
 
-## ✨ Features
+##  Features
 
-### 🎯 Core Functionality
-- **📄 PDF Upload**: Drag-and-drop PDF document upload
-- **🔍 Intelligent Search**: Natural language queries with semantic understanding
-- **💬 Interactive Chat**: Real-time conversation interface
-- **🧠 Context-Aware Answers**: Responses based on document content
-- **📱 Responsive Design**: Works seamlessly on desktop and mobile
-- **🔄 Real-time Processing**: Instant responses with loading indicators
+###  Core Functionality
+- **PDF Upload**: Drag-and-drop PDF document upload
+- **Intelligent Search**: Natural language queries with semantic understanding
+- **Interactive Chat**: Real-time conversation interface
+- **Context-Aware Answers**: Responses based on document content
+- **Responsive Design**: Works seamlessly on desktop and mobile
+- **Real-time Processing**: Instant responses with loading indicators
 
-### 🚀 Advanced Capabilities
-- **📚 Multiple Document Support**: Process and query multiple PDFs
-- **🎨 Modern UI**: Clean, intuitive interface built with React + TypeScript
-- **⚡ Fast Processing**: Optimized vector search with ChromaDB
-- **🔒 Secure**: CORS-protected API with file validation
-- **📊 Analytics Ready**: Structured logging with timestamps
-- **🐳 Production Ready**: Dockerized with health checks
+###  Advanced Capabilities
+- **Multiple Document Support**: Process and query multiple PDFs
+- **Modern UI**: Clean, intuitive interface built with React + TypeScript
+- **Fast Processing**: Optimized vector search with ChromaDB
+- **Secure**: CORS-protected API with file validation
+- **Analytics Ready**: Structured logging with timestamps
+- **Production Ready**: Dockerized with health checks
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Backend
-- **🚀 FastAPI**: Modern, fast web framework for building APIs
-- **🧠 LangChain**: Framework for developing LLM-powered applications
-- **🤗 HuggingFace**: Pre-training Transformers (google/flan-t5-large)
-- **📊 SentenceTransformers**: all-mpnet-base-v2 for embeddings
-- **🗄️ ChromaDB**: Vector database for similarity search
-- **📄 PDF Processing**: pdfminer.six for document extraction
+- **FastAPI**: Modern, fast web framework for building APIs
+- **LangChain**: Framework for developing LLM-powered applications
+- **HuggingFace**: Pre-training Transformers (google/flan-t5-large)
+- **SentenceTransformers**: all-mpnet-base-v2 for embeddings
+- **ChromaDB**: Vector database for similarity search
+- **PDF Processing**: pdfminer.six for document extraction
 
 ### Frontend
-- **⚛️ React 18**: Modern UI library with hooks
-- **📘 TypeScript**: Type-safe development
-- **🎨 Tailwind CSS**: Utility-first CSS framework
-- **🚀 Vite**: Fast build tool and dev server
-- **🎭 Radix UI**: Accessible UI components
+- **React 18**: Modern UI library with hooks
+- **TypeScript**: Type-safe development
+- **Tailwind CSS**: Utility-first CSS framework
+- **Vite**: Fast build tool and dev server
+- **Radix UI**: Accessible UI components
 
 ### Infrastructure
-- **🐳 Docker**: Containerized deployment
-- **☁️ Render.com**: Production hosting platform
-- **🔒 Nginx**: Reverse proxy and load balancing
-- **📊 Health Checks**: Automatic service monitoring
+- **Docker**: Containerized deployment
+- **Render.com**: Production hosting platform
+- **Nginx**: Reverse proxy and load balancing
+- **Health Checks**: Automatic service monitoring
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - Python 3.10+
@@ -142,7 +142,7 @@ npm run dev
 
 ---
 
-## 🐳 Docker Deployment
+##  Docker Deployment
 
 ### Local Development with Docker
 
@@ -205,7 +205,7 @@ export SENTENCE_TRANSFORMERS_HOME=/app/models
 
 ---
 
-## 📖 API Documentation
+##  API Documentation
 
 ### Core Endpoints
 
@@ -309,7 +309,7 @@ npm run type-check
 
 ---
 
-## 🧪 Testing
+##  Testing
 
 ### Backend Testing
 ```bash
@@ -333,7 +333,7 @@ curl -X POST "http://localhost:8000/ask" -d '{"query":"Test question"}'
 
 ---
 
-## 📦 Production Deployment
+##  Production Deployment
 
 ### Render.com Deployment
 
@@ -372,7 +372,7 @@ HOST=0.0.0.0
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 
 We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
 
@@ -391,25 +391,25 @@ We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.
 
 ---
 
-## 📄 License
+##  License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-## 📞 Contact
+##  Contact
 
 **Project Maintainer:** [Yerram Deekshith Kumar]
 
-- 📧 Email: deekshithyerram@gmail.com
-- 🐙 GitHub: [@encoder43](https://github.com/encoder43)
-- 💼 LinkedIn: [yerramdeekshithkumar](https://www.linkedin.com/in/yerramdeekshithkumar)
+- Email: deekshithyerram@gmail.com
+- GitHub: [@encoder43](https://github.com/encoder43)
+- LinkedIn: [yerramdeekshithkumar](https://www.linkedin.com/in/yerramdeekshithkumar)
 
 **Project Links:**
-- 🚀 Live Demo: [Demo URL](https://infogenie-abd.onrender.com)
-- 📖 Documentation: [Docs URL](#)
-- 📖Research paper:[Infoginie](https://www.scitepress.org/Papers/2024/133125/133125.pdf)
-- 🐛 Issue Tracker: [GitHub Issues](https://github.com/encoder43/infogenie/issues)
+- Live Demo: [Demo URL](https://infogenie-abd.onrender.com)
+- Documentation: [Docs URL](#)
+- Research paper:[Infoginie](https://www.scitepress.org/Papers/2024/133125/133125.pdf)
+- Issue Tracker: [GitHub Issues](https://github.com/encoder43/infogenie/issues)
 
 ---
 
